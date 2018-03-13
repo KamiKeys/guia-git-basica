@@ -1,7 +1,11 @@
-# GUÍA GIT BÁSICA 
+# guia-git-basica
 Guía básica de **GIT**  
 
-**git init** → Inicializa un repositorio local.  
+Inicializa un repositorio local
+
+```
+git init
+```
 
 **Add y commit directamente**:  
 El siguiente comando es un add y un commit directamente:  
@@ -13,8 +17,8 @@ git add nombre o git add * para todo → añadir que git lo controle. Añadir al
 
 **git status** → para ver el estado.
 
-**El fichero .gitignore**
-dentro se pone lo que quieras que gi tignore del proyecto, pero tienes que crearlo tu. Y pones dentro lo que quieras ignorar.
+### El fichero .gitignore
+Dentro se pone lo que quieras que gi tignore del proyecto, pero tienes que crearlo tu. Y pones dentro lo que quieras ignorar.
 
 
 al hacer un commit SIEMPRE se pone un mini texto de hasta 50 caracteres para explicar el commit en cuestión y luego otro más extendido:  
@@ -30,7 +34,7 @@ al hacer un commit SIEMPRE se pone un mini texto de hasta 50 caracteres para exp
 
 **NOTA:** Se puede añadir más de un repo remoto en una carpeta y al hacer el push, se elige dónde se va a subir con los alias. La cosa es que se puede tener enlazado con muchos repos.
 
-**Arreglar un commit:**  
+### Arreglar un commit:
 **git commit --amend** → Elimina el último commit  
 **git commit --amend -m ”comentario”** → Sobreescribe del tirón el último commit  
 ![git commit --amend -m "explicacion"](https://raw.githubusercontent.com/KamiKeys/guia-git-basica/master/images/image1.png)
@@ -78,7 +82,7 @@ Donde el primer dígito serían grandes y notables cambios como la interfaz grá
 podemos hacer otro dígito: v1.2.4.Z
 donde z sería para los beta tester, número impar (versión inestable) y número par (versión estable).
 
-**Tipos de etiquetas**
+#### Tipos de etiquetas
 
 **Anotadas (recomendada)** → Obliga a poner un mensaje. **git tag -a v1.2.0 -m ‘mensaje’**
 
@@ -104,7 +108,6 @@ De forma predeterminada etiqueta el último commit.
 **git tag -s v0.0.3 -m 'Etiqueta firmada por mi'** → -s para firmar cifrado.
 
 ### Ramas    
-
 **Ver en qué rama estamos** → git branch, se marca con * en la que estoy  
 **Crear una rama nueva** → git branch nombreRama  
 **Moverse entre ramas** → git checkout nombreRama  
@@ -120,7 +123,7 @@ De forma predeterminada etiqueta el último commit.
 **Crear rama y moverme a ella del tironDejar lo que estás haciendo** → git checkout -b nombreRama  
 
 
-### Rebase
+### _Rebase_
 
 Es parecido a un merge, solo que un merge crea un commit solo para fusionar dos ramas.
 Un rebase poda la rama y la pega delante de la master. No se crea un commit extra innecesario.
@@ -129,19 +132,24 @@ Desde la master se hace git rebase nombreRamaAAñadir
 Eso lo copia, por lo que luego se borra la rama que ya no sirve con git branch -d nombreRama
 
 
-### Stashing
+### _Stashing_
 
 Estás picando en tu trabajo y tu jefe te dice que tienes que hacer otra cosa YA.
 Vuelca en una pila temporal todos los cambios hechos desde el último commit.
 
-**git stash**
+```
+git stash
+```
 
 realizas el trabajo importante
 
 vuelves a lo tuyo
-**git stash pop**
 
-es una pila, por eso el pop. Se puede hacer más stash y el pop te saca el último que entra. 
+```
+git stash pop
+```
+
+Es una pila, por eso el pop. Se puede hacer más stash y el pop te saca el último que entra. 
 **Para verlos todos utilizamos** → git stash list
 **y con su código utilizamos** → git stash código
 
