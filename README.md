@@ -50,7 +50,7 @@ al hacer un commit SIEMPRE se pone un mini texto de hasta 50 caracteres para exp
 `git checkout -b <nombre rama> sh1 commit` → se hace una rama desde el commit indicado.  
 
 
-###Repositorios Remotos
+## Repositorios Remotos
 
 ![git init --bare](https://raw.githubusercontent.com/KamiKeys/guia-git-basica/master/images/image7.png)
 
@@ -69,7 +69,7 @@ al hacer un commit SIEMPRE se pone un mini texto de hasta 50 caracteres para exp
 **NOTA:** para la resolución de conflictos en diferentes clases pues es muy fácil, se descarga lo del otro y luego añado lo mio. Si se toca de la misma clase hay que ponerse de acuerdo sobre qué dejar y qué quitar. Se hace un pull, se quita lo que queramos y lo subimos again.
 
 
-###Fundamentos de Git - Etiquetado
+## Etiquetado
 
 Como consejo podemos poner v1.2.4
 Donde el primer dígito serían grandes y notables cambios como la interfaz gráfica o nuevas funciones. El segundo dígito arreglo de errores pero sobre todo nuevas pequeñas funcionalidades. Tercer dígito para arreglo de errores.
@@ -95,14 +95,14 @@ De forma predeterminada etiqueta el último commit.
 
 `git push -u origin master` → guarda origin master para luego hacer más tarde el push son poner lo otro.  
 
-###Firma electrónica    
+## Firma electrónica    
 **Ver nuestras claves** → `gpg --list-secret-keys --keyid-format LONG`
 
 **Agregar una clave privada a git** →  `git config --global user.signingkey clave`
 
 `git tag -s v0.0.3 -m 'Etiqueta firmada por mi'` → -s para firmar cifrado.
 
-###Ramas    
+## Ramas    
 **Ver en qué rama estamos** → `git branch`, se marca con * en la que estoy  
 **Crear una rama nueva** → `git branch nombreRama`  
 **Moverse entre ramas** → `git checkout nombreRama`  
@@ -118,7 +118,7 @@ De forma predeterminada etiqueta el último commit.
 **Crear rama y moverme a ella del tironDejar lo que estás haciendo** → `git checkout -b nombreRama`  
 
 
-###Rebase
+## Rebase
 
 Es parecido a un merge, solo que un merge crea un commit solo para fusionar dos ramas.
 Un rebase poda la rama y la pega delante de la master. No se crea un commit extra innecesario.
@@ -127,7 +127,7 @@ Desde la master se hace `git rebase nombreRamaAAñadir`
 Eso lo copia, por lo que luego se borra la rama que ya no sirve con `git branch -d nombreRama`
 
 
-###Stashing
+## Stashing
 
 Estás picando en tu trabajo y tu jefe te dice que tienes que hacer otra cosa YA.
 Vuelca en una pila temporal todos los cambios hechos desde el último commit.
