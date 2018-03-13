@@ -84,17 +84,17 @@ donde z sería para los beta tester, número impar (versión inestable) y númer
 
 **Simple:** → etiqueta rápidamente para seguir trabajando, sin documentar. **git tag**
 
-**Para ver a qué pertenece la etiqueta** → git show nombreEtiqueta
-**Para mostrar las etiquetas** → git show
-**Borrar etiqueta** → git tag -d nombreEtiqueta
+**Para ver a qué pertenece la etiqueta** → git show nombreEtiqueta  
+**Para mostrar las etiquetas** → git show  
+**Borrar etiqueta** → git tag -d nombreEtiqueta  
 
 De forma predeterminada etiqueta el último commit. 
-**Para etiquetar antiguos sería** →  git tag -a v0.0.1 -m 'Primera etiqueta' 13434ecf <--(algo del hash de ese commit)
+**Para etiquetar antiguos sería** →  git tag -a v0.0.1 -m 'Primera etiqueta' 13434ecf <--(algo del hash de ese commit)    
 
 **Las etiquetas no se publican en los push. Tengo que hacer un push específico de la etiqueta o de todas.** → git push origin v0.0.1 (en este caso es para una solo.)  
-**Sube todas las etiquetas** → git push origin --tags
+**Sube todas las etiquetas** → git push origin --tags    
 
-**git push -u origin master** → guarda origin master para luego hacer más tarde el push son poner lo otro.
+**git push -u origin master** → guarda origin master para luego hacer más tarde el push son poner lo otro.  
 
 ###Firma electrónica    
 **Ver nuestras claves** → gpg --list-secret-keys --keyid-format LONG
@@ -112,11 +112,11 @@ De forma predeterminada etiqueta el último commit.
 **Borrar rama** → git branch -d nombreRama  
 
 
-**incorpora todos los commits a mi código master que estén en la rama que corrija el bug** → git merge nombreRama
+**incorpora todos los commits a mi código master que estén en la rama que corrija el bug** → git merge nombreRama    
 
-**borrar rama** → git branch -d nombreRama
-**me dice la rama en la que estoy** → git branch
-**Crear rama y moverme a ella del tironDejar lo que estás haciendo** → git checkout -b nombreRama
+**borrar rama** → git branch -d nombreRama  
+**me dice la rama en la que estoy** → git branch  
+**Crear rama y moverme a ella del tironDejar lo que estás haciendo** → git checkout -b nombreRama  
 
 
 ###Rebase
