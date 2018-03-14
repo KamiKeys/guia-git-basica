@@ -12,7 +12,7 @@ Siéntete totalmente libre de participar, añadir o corregir en caso de que encu
 
 
 ## Primeros Pasos  
-<span style="color:blue">`git init`</span> → Inicializa un repositorio local.  
+`git init` → Inicializa un repositorio local.  
 
 **Add y commit directamente**:  
 El siguiente comando es un add y un commit directamente:  
