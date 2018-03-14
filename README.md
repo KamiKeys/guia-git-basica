@@ -1,15 +1,30 @@
+# GUÍA BÁSICA DE GIT  
 [![GitHub release](https://img.shields.io/github/release/KamiKeys/guia-git-basica.svg)]()
 [![GitHub last commit](https://img.shields.io/github/last-commit/KamiKeys/guia-git-basica.svg)]()
 [![GitHub issues](https://img.shields.io/github/issues/KamiKeys/guia-git-basica.svg)]()
 [![GitHub stars](https://img.shields.io/github/stars/KamiKeys/guia-git-basica.svg)]()
 [![GitHub forks](https://img.shields.io/github/forks/KamiKeys/guia-git-basica.svg)](https://github.com/KamiKeys/guia-git-basica/network)
-# GUÍA BÁSICA DE GIT  
 ## Introducción  
 Bienvenid@ a una pequeña guía sobre comandos de Git. Aquí no vas a encontrar una extensa "guía de vuelo" con la que te conviertas en todo un profesional, ya que no es la intención. Encontrarás comandos básicos que se usan a diario, y algunos que te pueden sacar de apuros en otros casos.  
 Siéntete totalmente libre de participar, añadir o corregir en caso de que encuentres algún error.
 
 ## Primeros Pasos  
-`git init` → Inicializa un repositorio local.  
+
+Lo primero será inicializar un repositorio de manera local, para poder trabajar bajo el control de Git.  
+`git init` → Inicializa un repositorio local. 
+
+Una vez hemos inicializado el repositorio, deberemos añadir bajo seguimiento los archivos que añadamos o modifiquemos:  
+`git add`, `git add nombre` o `git add *` para todo → añadir que git lo controle. Añadir al index.  
+
+Para ver los cambios se utiliza:  
+`git status`  
+
+Una vez se añaden los ficheros o modificaciones y queremos que esos cambios queden marcados, se deberá hacer un commit:  
+`git commit` → Aparecerá el editor de texto vim, para comentar qué se ha hecho, ya que es obligatorio.  
+`git commit -m "" -m ""` → En este caso no aparece el editor, y ponemos el comentario dentro de las "". El primer `-m` es para un título y el segundo para la explicación detallada. Anque se puede poner solo un `-m`.  
+
+Al hacer un commit SIEMPRE se pone un mini texto de hasta 50 caracteres para explicar el commit en cuestión y luego otro más extendido (opcional):  
+![git commit -m "texto corto" -m "texto largo"](https://raw.githubusercontent.com/KamiKeys/guia-git-basica/master/images/image3.png) 
 
 **Add y commit directamente**:  
 El siguiente comando es un add y un commit directamente:  
@@ -17,26 +32,17 @@ El siguiente comando es un add y un commit directamente:
 Otro ejemplo:  
 ![git commit -am fichero](https://raw.githubusercontent.com/KamiKeys/guia-git-basica/master/images/image5.png)  
 
-`git add`, `git add nombre` o `git add *` para todo → añadir que git lo controle. Añadir al index.
-
-`git status` → para ver el estado.
-
 **El fichero .gitignore**
-dentro se pone lo que quieras que gi tignore del proyecto, pero tienes que crearlo tu. Y pones dentro lo que quieras ignorar.
+Dentro se pone lo que quieras que git ignore del proyecto, pero tienes que crearlo tu (o crear el repositorio desde GitHub). Y pones dentro lo que quieras ignorar.  
 
 
-al hacer un commit SIEMPRE se pone un mini texto de hasta 50 caracteres para explicar el commit en cuestión y luego otro más extendido:  
-![git commit -m "texto corto" -m "texto largo"](https://raw.githubusercontent.com/KamiKeys/guia-git-basica/master/images/image3.png)  
-
-`git log` → ver detalles  
-`git log -v` → más desglosado  
-`git log -p` → ver más detalles  
-`git config -l` → ver información de la configuración de git  
+`git log` → Ver detalles  
+`git log -v` → Más desglosado  
+`git log -p` → Ver más detalles  
+`git config -l` → Ver información de la configuración de git  
 `git status -s` → Muestra información si en el add hay algo y luego en nuestro directorio de trabajo se ha añadido.  
 `git status -v` → Ver rama actual y trabajo sin add en esa rama.  
 `git diff` → Muestra lo que ya está añadido en add por lo nuevo de nuestro directorio de trabajo.  
-
-**NOTA:** Se puede añadir más de un repo remoto en una carpeta y al hacer el push, se elige dónde se va a subir con los alias. La cosa es que se puede tener enlazado con muchos repos.
 
 **Arreglar un commit:**  
 `git commit --amend` → Elimina el último commit  
@@ -47,16 +53,16 @@ al hacer un commit SIEMPRE se pone un mini texto de hasta 50 caracteres para exp
 **NOTA:** En la carpeta `.git` existen los siguientes archivos(dentro de `config` se pueden ver datos como con el comando `git config -l`):  
 
 ![ls](https://raw.githubusercontent.com/KamiKeys/guia-git-basica/master/images/image6.png)  
-`git reset HEAD clase2.cs` → sirve para quitar un archivo.  
-`git reflog` → para ver todas las páginas y sha1.  
+`git reset HEAD clase2.cs` → Sirve para quitar un archivo.  
+`git reflog` → Para ver todas las páginas y sha1.  
 `git reset` y las primeras letras de **sha1** se vuelve a ese momento del pasado.  
-`git reset --hard commit` → vuelve atrás y borra lo que estuviese delante. (Si hemos subido un push)  
-`git reset --soft HEAD@{1}` → vuelve atrás el último comando (si todavía no hemos hecho push)  
-`git checkout --nombreArchivo` → para quitarlo de add o rm, antes del commit.  
-`git rm` → elimina archivo.  
+`git reset --hard commit` → Vuelve atrás y borra lo que estuviese delante. (Si hemos subido un push)  
+`git reset --soft HEAD@{1}` → Vuelve atrás el último comando (si todavía no hemos hecho push)  
+`git checkout --nombreArchivo` → Para quitarlo de add o rm, antes del commit.  
+`git rm` → Elimina archivo.  
 `git rm --cached` → Para quitar de la rama el archivo, pero sigue estando en el directorio.  
-`git checkout sha1delcommit` → volvemos a un commit anterior  
-`git checkout -b <nombre rama> sh1 commit` → se hace una rama desde el commit indicado.  
+`git checkout sha1delcommit` → Volvemos a un commit anterior  
+`git checkout -b <nombre rama> sh1 commit` → Se hace una rama desde el commit indicado.  
 
 
 ## Repositorios Remotos
@@ -65,32 +71,34 @@ al hacer un commit SIEMPRE se pone un mini texto de hasta 50 caracteres para exp
 
 `git init --bare` → Inicializa como repositorio remoto.  
 `git clone` → Clona el repositorio.  
-`git remote add origin enlace` → añadir un directorio remoto.  
-`git remote` →  dice los archivos remotos.  
-`git remote -v` → da más detalles.  
+`git remote add origin enlace` → Añadir un directorio remoto.  
+`git remote` →  Dice los archivos remotos.  
+`git remote -v` → Da más detalles.  
 `git remote remove nombreAlias` → Borra la referencia.  
 `git remote rename viejo nuevo` → Cambia nombre de los alias  
-`git fetch origin master` → baja y ve si hay cambios en el repositorio remoto respecto al tuyo local.  
-`git diff origin master` → ver los nuevos cambios.  
-`git merge origin master` → guarda los nuevos cambios.  
+`git fetch origin master` → Baja y ve si hay cambios en el repositorio remoto respecto al tuyo local.  
+`git diff origin master` → Ver los nuevos cambios.  
+`git merge origin master` → Guarda los nuevos cambios.  
 `git pull` = `git fetch` + `git merge`.  
 
-**NOTA:** para la resolución de conflictos en diferentes clases pues es muy fácil, se descarga lo del otro y luego añado lo mio. Si se toca de la misma clase hay que ponerse de acuerdo sobre qué dejar y qué quitar. Se hace un `pull`, se quita lo que queramos y lo subimos (`push`) again.
+**NOTA:** Para la resolución de conflictos en diferentes clases pues es muy fácil, se descarga lo del otro y luego añado lo mio. Si se toca de la misma clase hay que ponerse de acuerdo sobre qué dejar y qué quitar. Se hace un `pull`, se quita lo que queramos y lo subimos (`push`) again.  
 
+
+**NOTA:** Se puede añadir más de un repositorio remoto en una carpeta y al hacer el push, se elige dónde se va a subir con los alias. La cosa es que se puede tener enlazado con muchos repositorios.  
 
 ## Etiquetado
 
 Como consejo podemos poner `v1.2.4`
 Donde el primer dígito serían grandes y notables cambios como la interfaz gráfica o nuevas funciones. El segundo dígito arreglo de errores pero sobre todo nuevas pequeñas funcionalidades. Tercer dígito para arreglo de errores.
 
-podemos hacer otro dígito: `v1.2.4.Z`
+Podemos hacer otro dígito: `v1.2.4.Z`
 donde z sería para los beta tester, número impar (versión inestable) y número par (versión estable).
 
 **Tipos de etiquetas**
 
 **Anotadas (recomendada)** → Obliga a poner un mensaje. `git tag -a v1.2.0 -m "mensaje"`
 
-**Simple:** → etiqueta rápidamente para seguir trabajando, sin documentar. `git tag`
+**Simple:** → Etiqueta rápidamente para seguir trabajando, sin documentar. `git tag`
 
 **Para ver a qué pertenece la etiqueta** → `git show nombreEtiqueta`  
 **Para mostrar las etiquetas** → `git show`  
@@ -120,10 +128,10 @@ De forma predeterminada etiqueta el último commit.
 **Borrar rama** → `git branch -d nombreRama`  
 
 
-**incorpora todos los commits a mi código master que estén en la rama que corrija el bug** → `git merge nombreRama`    
+**Incorpora todos los commits a mi código master que estén en la rama que corrija el bug** → `git merge nombreRama`    
 
-**borrar rama** → `git branch -d nombreRama`  
-**me dice la rama en la que estoy** → `git branch`  
+**Borrar rama** → `git branch -d nombreRama`  
+**Me dice la rama en la que estoy** → `git branch`  
 **Crear rama y moverme a ella del tironDejar lo que estás haciendo** → `git checkout -b nombreRama`  
 
 
@@ -143,11 +151,11 @@ Vuelca en una pila temporal todos los cambios hechos desde el último `commit`.
 
 `git stash`
 
-realizas el trabajo importante
+realizas el trabajo importante...
 
-vuelves a lo tuyo  
+y vuelves a lo tuyo:  
 `git stash pop`
 
-es una pila, por eso el pop. Se puede hacer más `stash` y el `pop` te saca el último que entra. 
+Es una pila, por eso el pop. Se puede hacer más `stash` y el `pop` te saca el último que entra. 
 **Para verlos todos utilizamos** → `git stash list`
 **y con su código utilizamos** → `git stash código`
