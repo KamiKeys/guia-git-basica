@@ -15,7 +15,7 @@ Siéntete totalmente libre de participar, añadir o corregir en caso de que encu
 [![GitHub forks](https://img.shields.io/github/forks/KamiKeys/guia-git-basica.svg)](https://github.com/KamiKeys/guia-git-basica/network)
 
 ## Primeros Pasos  
-<span style="color:blue">`git init`<\span> → Inicializa un repositorio local.  
+<span style="color:blue">`git init`</span> → Inicializa un repositorio local.  
 
 **Add y commit directamente**:  
 El siguiente comando es un add y un commit directamente:  
