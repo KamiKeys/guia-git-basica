@@ -1,12 +1,15 @@
+# GUÍA BÁSICA DE GIT  
+
 [![GitHub release](https://img.shields.io/github/release/KamiKeys/guia-git-basica.svg)]()
 [![GitHub last commit](https://img.shields.io/github/last-commit/KamiKeys/guia-git-basica.svg)]()
 [![GitHub issues](https://img.shields.io/github/issues/KamiKeys/guia-git-basica.svg)]()
 [![GitHub stars](https://img.shields.io/github/stars/KamiKeys/guia-git-basica.svg)]()
 [![GitHub forks](https://img.shields.io/github/forks/KamiKeys/guia-git-basica.svg)](https://github.com/KamiKeys/guia-git-basica/network)
-# GUÍA BÁSICA DE GIT  
+
 ## Introducción  
 Bienvenid@ a una pequeña guía sobre comandos de Git. Aquí no vas a encontrar una extensa "guía de vuelo" con la que te conviertas en todo un profesional, ya que no es la intención. Encontrarás comandos básicos que se usan a diario, y algunos que te pueden sacar de apuros en otros casos.  
 Siéntete totalmente libre de participar, añadir o corregir en caso de que encuentres algún error.
+
 
 ## Primeros Pasos  
 `git init` → Inicializa un repositorio local.  
