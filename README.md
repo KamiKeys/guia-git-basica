@@ -150,6 +150,7 @@ De forma predeterminada etiqueta el último commit.
 ## Ramas<a name="id6"></a>    
 **Ver en qué rama estamos** → `git branch`, se marca con * en la que estoy  
 **Crear una rama nueva** → `git branch nombreRama`  
+**Crear una rama apuntando a un commit**  → `git checkout nombreRama sha1DelCommit`  
 **Moverse entre ramas** → `git checkout nombreRama`  
 **Crear rama y moverse a ella del tirón** → `git checkout -b nombreRama`  
 **Volver a Master** → `git checkout master`  
