@@ -75,10 +75,12 @@ Dentro se pone lo que quieras que git ignore del proyecto, pero tienes que crear
 ![ls](https://raw.githubusercontent.com/KamiKeys/guia-git-basica/master/images/image6.png)  
 `git reset HEAD clase2.cs` → Sirve para quitar un archivo.  
 `git reflog` → Para ver todas las páginas y sha1.  
-`git reset` y las primeras letras de **sha1** se vuelve a ese momento del pasado.  
-`git reset --hard commit` → Vuelve atrás y borra lo que estuviese delante. (Si hemos subido un push)  
-`git reset --soft HEAD@{1}` → Vuelve atrás el último comando (si todavía no hemos hecho push)  
-`git checkout --nombreArchivo` → Para quitarlo de add o rm, antes del commit.  
+`git reset` y las primeras letras de **sha1** sin decir el modo, por defecto es --mixed.  
+Se puede poner el sha1 para un commit específico, o poner `HEAD@{1}` para volver justo al anterior.  
+`git reset --hard commit` → Vuelve atrás al sha1 del commit indicado y borra lo que estuviese delante.  
+`git reset --mixed HEAD@{1}` → Vuelve atrás 1 commit, deshace el commit pero mantiene los cambios en los ficheros.  
+`git reset --soft HEAD@{1}` → Vuelve atrás el puntero pero mantiene el commit y los cambios.  
+`git checkout --nombreArchivo` → Para quitar ficheros de add o rm, antes del commit.  
 `git rm` → Elimina archivo.  
 `git rm --cached` → Para quitar de la rama el archivo, pero sigue estando en el directorio.  
 `git checkout sha1delcommit` → Volvemos a un commit anterior  
