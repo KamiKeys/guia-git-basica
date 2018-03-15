@@ -3,7 +3,8 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/KamiKeys/guia-git-basica.svg)]()
 [![GitHub issues](https://img.shields.io/github/issues/KamiKeys/guia-git-basica.svg)]()
 [![GitHub stars](https://img.shields.io/github/stars/KamiKeys/guia-git-basica.svg)]()
-[![GitHub forks](https://img.shields.io/github/forks/KamiKeys/guia-git-basica.svg)](https://github.com/KamiKeys/guia-git-basica/network)  
+[![GitHub forks](https://img.shields.io/github/forks/KamiKeys/guia-git-basica.svg)](https://github.com/KamiKeys/guia-git-basica/network)
+[![GitHub license](https://img.shields.io/github/license/KamiKeys/guia-git-basica.svg)](https://github.com/KamiKeys/guia-git-basica/blob/master/LICENSE)  
 
 ## Índice    
 1. [Introducción](#id1)
