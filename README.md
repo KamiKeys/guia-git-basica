@@ -26,7 +26,11 @@ Siéntete totalmente libre de participar, añadir o corregir en caso de que encu
 
 ## Primeros Pasos<a name="id2"></a>  
 
-Lo primero será inicializar un repositorio de manera local, para poder trabajar bajo el control de Git.  
+Lo primero será indicar a git quienes somos, para que pueda indicar quién hizo cada cambio:  
+`git config --global user.name "John Doe"` → Configuramos el nombre con el que se nos verá (No es el nombre de usuario).  
+`git config --global user.email johndoe@example.com` → Configuramos el correo con el que podrán contactar con nosotros.  
+
+Luego deberemos inicializar un repositorio de manera local, para poder trabajar bajo el control de Git.  
 `git init` → Inicializa un repositorio local. 
 
 También se puede hacer un `git init nombreProyecto` y automáticamente se crea la carpeta del proyecto.  
