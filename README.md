@@ -94,7 +94,7 @@ Dentro se pone lo que quieras que git ignore del proyecto, pero tienes que crear
 `git remote remove nombreAlias` → Borra la referencia.  
 `git remote rename viejo nuevo` → Cambia nombre de los alias  
 `git fetch origin master` → Baja y ve si hay cambios en el repositorio remoto respecto al tuyo local.  
-`git diff origin master` → Ver los nuevos cambios.  
+`git diff origin/master` → Ver los nuevos cambios.  
 `git merge origin master` → Guarda los nuevos cambios.  
 `git pull` = `git fetch` + `git merge`.  
 
