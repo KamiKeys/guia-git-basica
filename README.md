@@ -8,6 +8,8 @@
 Bienvenid@ a una pequeña guía sobre comandos de Git. Aquí no vas a encontrar una extensa "guía de vuelo" con la que te conviertas en todo un profesional, ya que no es la intención. Encontrarás comandos básicos que se usan a diario, y algunos que te pueden sacar de apuros en otros casos.  
 Siéntete totalmente libre de participar, añadir o corregir en caso de que encuentres algún error.
 
+<br/>
+
 ## Primeros Pasos  
 
 Lo primero será inicializar un repositorio de manera local, para poder trabajar bajo el control de Git.  
@@ -64,6 +66,7 @@ Dentro se pone lo que quieras que git ignore del proyecto, pero tienes que crear
 `git checkout sha1delcommit` → Volvemos a un commit anterior  
 `git checkout -b <nombre rama> sh1 commit` → Se hace una rama desde el commit indicado.  
 
+<br/>
 
 ## Repositorios Remotos
 
@@ -85,6 +88,8 @@ Dentro se pone lo que quieras que git ignore del proyecto, pero tienes que crear
 
 
 **NOTA:** Se puede añadir más de un repositorio remoto en una carpeta y al hacer el push, se elige dónde se va a subir con los alias. La cosa es que se puede tener enlazado con muchos repositorios.  
+
+<br/>
 
 ## Etiquetado
 
@@ -112,12 +117,16 @@ De forma predeterminada etiqueta el último commit.
 
 `git push -u origin master` → guarda `origin master` para luego hacer más tarde el push son poner lo otro.  
 
+<br/>
+
 ## Firma electrónica    
 **Ver nuestras claves** → `gpg --list-secret-keys --keyid-format LONG`
 
 **Agregar una clave privada a git** →  `git config --global user.signingkey clave`
 
 `git tag -s v0.0.3 -m "Etiqueta firmada por mi"` → -s para firmar cifrado.
+
+<br/>
 
 ## Ramas    
 **Ver en qué rama estamos** → `git branch`, se marca con * en la que estoy  
@@ -135,6 +144,8 @@ De forma predeterminada etiqueta el último commit.
 **Crear rama y moverme a ella del tironDejar lo que estás haciendo** → `git checkout -b nombreRama`  
 
 
+<br/>
+
 ## Rebase
 
 Es parecido a un `merge`, solo que un `merge` crea un `commit` solo para fusionar dos ramas.
@@ -143,6 +154,8 @@ Un `rebase` poda la rama y la pega delante de la `master`. No se crea un `commit
 Desde la `master` se hace `git rebase nombreRamaAAñadir` 
 Eso lo copia, por lo que luego se borra la rama que ya no sirve con `git branch -d nombreRama`
 
+
+<br/>
 
 ## Stashing
 
