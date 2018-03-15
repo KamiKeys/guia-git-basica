@@ -29,6 +29,8 @@ Siéntete totalmente libre de participar, añadir o corregir en caso de que encu
 Lo primero será inicializar un repositorio de manera local, para poder trabajar bajo el control de Git.  
 `git init` → Inicializa un repositorio local. 
 
+También se puede hacer un `git init nombreProyecto` y automáticamente se crea la carpeta del proyecto.  
+
 Una vez hemos inicializado el repositorio, deberemos añadir bajo seguimiento los archivos que añadamos o modifiquemos:  
 `git add`, `git add nombre` o `git add *` para todo → añadir que git lo controle. Añadir al index.  
 
@@ -47,6 +49,8 @@ El siguiente comando es un add y un commit directamente:
 ![git commit -am fichero](https://raw.githubusercontent.com/KamiKeys/guia-git-basica/master/images/image4.png)  
 Otro ejemplo:  
 ![git commit -am fichero](https://raw.githubusercontent.com/KamiKeys/guia-git-basica/master/images/image5.png)  
+
+Esto solo funciona si antes hemos añadido el fichero bajo el control de versiones, no podemos hacer un `-am` nada más crearlo.  
 
 **El fichero .gitignore**
 Dentro se pone lo que quieras que git ignore del proyecto, pero tienes que crearlo tu (o crear el repositorio desde GitHub). Y pones dentro lo que quieras ignorar.  
@@ -147,6 +151,7 @@ De forma predeterminada etiqueta el último commit.
 **Ver en qué rama estamos** → `git branch`, se marca con * en la que estoy  
 **Crear una rama nueva** → `git branch nombreRama`  
 **Moverse entre ramas** → `git checkout nombreRama`  
+**Crear rama y moverse a ella del tirón** → `git checkout -b nombreRama`  
 **Volver a Master** → `git checkout master`  
 **Ver ramas identificadas por colores** → `git log --graph`  
 **Borrar rama** → `git branch -d nombreRama`  
@@ -156,8 +161,6 @@ De forma predeterminada etiqueta el último commit.
 
 **Borrar rama** → `git branch -d nombreRama`  
 **Me dice la rama en la que estoy** → `git branch`  
-**Crear rama y moverme a ella del tironDejar lo que estás haciendo** → `git checkout -b nombreRama`  
-
 
 <br/>
 
