@@ -3,14 +3,27 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/KamiKeys/guia-git-basica.svg)]()
 [![GitHub issues](https://img.shields.io/github/issues/KamiKeys/guia-git-basica.svg)]()
 [![GitHub stars](https://img.shields.io/github/stars/KamiKeys/guia-git-basica.svg)]()
-[![GitHub forks](https://img.shields.io/github/forks/KamiKeys/guia-git-basica.svg)](https://github.com/KamiKeys/guia-git-basica/network)
-## Introducción  
+[![GitHub forks](https://img.shields.io/github/forks/KamiKeys/guia-git-basica.svg)](https://github.com/KamiKeys/guia-git-basica/network)  
+
+## Índice    
+1. [Introducción](#id1)
+2. [Primeros Pasos](#id2)
+3. [Repositorios Remotos](#id3)
+4. [Etiquetado](#id4)
+5. [Firma Electrónica](#id5)
+6. [Ramas](#id6)
+7. [Rebase](#id7)
+8. [Stashing](#id8)
+
+<br/>
+
+## Introducción<a name="id1"></a>  
 Bienvenid@ a una pequeña guía sobre comandos de Git. Aquí no vas a encontrar una extensa "guía de vuelo" con la que te conviertas en todo un profesional, ya que no es la intención. Encontrarás comandos básicos que se usan a diario, y algunos que te pueden sacar de apuros en otros casos.  
 Siéntete totalmente libre de participar, añadir o corregir en caso de que encuentres algún error.
 
 <br/>
 
-## Primeros Pasos  
+## Primeros Pasos<a name="id2"></a>  
 
 Lo primero será inicializar un repositorio de manera local, para poder trabajar bajo el control de Git.  
 `git init` → Inicializa un repositorio local. 
@@ -68,7 +81,7 @@ Dentro se pone lo que quieras que git ignore del proyecto, pero tienes que crear
 
 <br/>
 
-## Repositorios Remotos
+## Repositorios Remotos<a name="id3"></a>  
 
 ![git init --bare](https://raw.githubusercontent.com/KamiKeys/guia-git-basica/master/images/image7.png)
 
@@ -91,7 +104,7 @@ Dentro se pone lo que quieras que git ignore del proyecto, pero tienes que crear
 
 <br/>
 
-## Etiquetado
+## Etiquetado<a name="id4"></a>
 
 Como consejo podemos poner `v1.2.4`
 Donde el primer dígito serían grandes y notables cambios como la interfaz gráfica o nuevas funciones. El segundo dígito arreglo de errores pero sobre todo nuevas pequeñas funcionalidades. Tercer dígito para arreglo de errores.
@@ -119,7 +132,7 @@ De forma predeterminada etiqueta el último commit.
 
 <br/>
 
-## Firma electrónica    
+## Firma Electrónica<a name="id5"></a>    
 **Ver nuestras claves** → `gpg --list-secret-keys --keyid-format LONG`
 
 **Agregar una clave privada a git** →  `git config --global user.signingkey clave`
@@ -128,7 +141,7 @@ De forma predeterminada etiqueta el último commit.
 
 <br/>
 
-## Ramas    
+## Ramas<a name="id6"></a>    
 **Ver en qué rama estamos** → `git branch`, se marca con * en la que estoy  
 **Crear una rama nueva** → `git branch nombreRama`  
 **Moverse entre ramas** → `git checkout nombreRama`  
@@ -146,7 +159,7 @@ De forma predeterminada etiqueta el último commit.
 
 <br/>
 
-## Rebase
+## Rebase<a name="id7"></a>
 
 Es parecido a un `merge`, solo que un `merge` crea un `commit` solo para fusionar dos ramas.
 Un `rebase` poda la rama y la pega delante de la `master`. No se crea un `commit` extra innecesario.
@@ -157,7 +170,7 @@ Eso lo copia, por lo que luego se borra la rama que ya no sirve con `git branch 
 
 <br/>
 
-## Stashing
+## Stashing<a name="id8"></a>
 
 Estás picando en tu trabajo y tu jefe te dice que tienes que hacer otra cosa YA.
 Vuelca en una pila temporal todos los cambios hechos desde el último `commit`.
