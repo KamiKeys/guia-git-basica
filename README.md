@@ -95,8 +95,8 @@ Dentro se pone lo que quieras que git ignore del proyecto, pero tienes que crear
 `git remote rename viejo nuevo` → Cambia nombre de los alias  
 `git fetch origin master` → Baja y ve si hay cambios en el repositorio remoto respecto al tuyo local.  
 `git diff origin/master` → Ver los nuevos cambios, que yo no tengo.  
- `git diff master origin/master` → que tengo yo y qué pasaría si integro lo nuevo.  
-`git merge origin master` → Guarda los nuevos cambios.  
+ `git diff master origin/master` → Ver qué tengo yo y qué pasaría si integro lo nuevo.  
+`git merge origin/master` → Integra los nuevos cambios.  
 `git pull` = `git fetch` + `git merge`.  
 
 **NOTA:** Para la resolución de conflictos en diferentes clases pues es muy fácil, se descarga lo del otro y luego añado lo mio. Si se toca de la misma clase hay que ponerse de acuerdo sobre qué dejar y qué quitar. Se hace un `pull`, se quita lo que queramos y lo subimos (`push`) again.  
@@ -161,7 +161,7 @@ De forma predeterminada etiqueta el último commit.
 
 <br/>
 
-## Rebase<a name="id7"></a>
+## Rebase<a name="id7"></a>  
 
 Es parecido a un `merge`, solo que un `merge` crea un `commit` solo para fusionar dos ramas.
 Un `rebase` poda la rama y la pega delante de la `master`. No se crea un `commit` extra innecesario.
