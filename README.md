@@ -182,6 +182,6 @@ realizas el trabajo importante...
 y vuelves a lo tuyo:  
 `git stash pop`
 
-Es una pila, por eso el pop. Se puede hacer más `stash` y el `pop` te saca el último que entra. 
-**Para verlos todos utilizamos** → `git stash list`
+Es una pila, por eso el pop. Se puede hacer más `stash` y el `pop` te saca el último que entra.  
+**Para verlos todos utilizamos** → `git stash list`  
 **y con su código utilizamos** → `git stash código`
