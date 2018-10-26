@@ -56,7 +56,7 @@ Otro ejemplo:
 
 Esto solo funciona si antes hemos añadido el fichero bajo el control de versiones, no podemos hacer un `-am` nada más crearlo.  
 
-**El fichero .gitignore**
+**El fichero .gitignore**  
 En este fichero deben indicarse las rutas de los ficheros y/o carpetas que queramos que git ignore del proyecto, osea que no realice un seguimiento sobre ellos. Pero ojo!! en la mayoría de los casos tienes que crear tu dicho fichero (o crear el repositorio desde GitHub). En casos como Android Studio dicho fichero se crea automáticamente, aunque no está completo al 100%.  
 
 
