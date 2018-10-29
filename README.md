@@ -146,7 +146,7 @@ De forma predeterminada etiqueta el último commit.
 
 ## Firma Electrónica<a name="id5"></a>    
 **Ver nuestras claves** → `gpg --list-secret-keys --keyid-format LONG`
-
+**Para generar una clave, si no tienes una ya instalada** → `gpg --gen-key`
 **Agregar una clave privada a git** →  `git config --global user.signingkey clave`
 
  **-s para firmar cifrado.** → `git tag -s v0.0.3 -m "Etiqueta firmada por mi"`
