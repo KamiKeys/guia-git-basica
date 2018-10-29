@@ -15,6 +15,7 @@
 6. [Ramas](#id6)
 7. [Rebase](#id7)
 8. [Stashing](#id8)
+9. [Errores comunes y su solución](#id9)
 
 <br/>
 
@@ -197,3 +198,33 @@ y vuelves a lo tuyo:
 Es una pila, por eso el pop. Se puede hacer más `stash` y el `pop` te saca el último que entra.  
 **Para verlos todos utilizamos** → `git stash list`  
 **y con su código utilizamos** → `git stash código`
+
+<br/>
+
+## Errores comunes y su solución<a name="id9"></a>  
+
+
+### failed to push some refs to 'name@domain'updates were rejected because the remote contains work that you do not have locally.<a name="id100"></a>  
+  
+**Resumen:** Alguien hizo un push al remoto mientras tú trabajabas, por lo que el remoto va un commit por delante de tú trabajo.  
+  
+**Posibles soluciones:**  
+  
+Tenemos dos posibles soluciones:  
+  
+&nbsp;&nbsp;&nbsp;**1. Hacer un merge.**  
+Hacer `git pull` (obtenemos todo y resolvemos los conflictos. Esto cuenta como commit) y hacemos `push` normalmente.  
+  
+&nbsp;&nbsp;&nbsp;**2. Hacer un rebase** (Esto evita un commit).  
+Hacemos `git fetch` (con esto traemos todos los cambios del remoto a nuestro local), 
+`git rebase origin/master` con esto podamos las ramas hacia nuestro commit (OJO!, pueden ocasionarse conflictos, los cuales hay que corregir con `git add`. Y finalmente usar `git rebase --continue`).
+Realizar `git push`.  
+  
+**Explicación del error:**  
+Hiciste un git pull al remoto que va por el commit nº1 sin problemas, mientras trabajabas otro desarrollador hizo un push (con esto el remoto esta un commit por encima de tu trabajo, es decir, el remoto va por el commit nº2).  
+Cuando tu haces tu commit para ti este es el nº2 (cuando para el remoto sería el nº3) y haces push este falla pues el remoto no sabe que hacer con el commit nº2 del otro desarrollador, pues tú le estas diciendo al remoto que los commit vayan de la manera: nº1 - nº3 cuando allí están de la forma nº1 - nº2 - (aquí debería ir el tuyo).  
+![Example]()
+
+
+
+
