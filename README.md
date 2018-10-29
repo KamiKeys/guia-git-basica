@@ -223,7 +223,10 @@ Realizar `git push`.
 **Explicación del error:**  
 Hiciste un git pull al remoto que va por el commit nº1 sin problemas, mientras trabajabas otro desarrollador hizo un push (con esto el remoto esta un commit por encima de tu trabajo, es decir, el remoto va por el commit nº2).  
 Cuando tu haces tu commit para ti este es el nº2 (cuando para el remoto sería el nº3) y haces push este falla pues el remoto no sabe que hacer con el commit nº2 del otro desarrollador, pues tú le estas diciendo al remoto que los commit vayan de la manera: nº1 - nº3 cuando allí están de la forma nº1 - nº2 - (aquí debería ir el tuyo).  
-![Example]()
+  
+  
+  
+![failed to push](https://raw.githubusercontent.com/JDamianCabello/guia-git-basica/master/images/PullFailExample.png)
 
 
 
