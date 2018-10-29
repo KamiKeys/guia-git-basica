@@ -15,7 +15,7 @@
 6. [Ramas](#id6)
 7. [Rebase](#id7)
 8. [Stashing](#id8)
-9. [Errores comunes y su solución](#id9)
+9. [Errores Comunes & Soluciones](#id9)
 
 <br/>
 
@@ -146,11 +146,10 @@ De forma predeterminada etiqueta el último commit.
 <br/>
 
 ## Firma Electrónica<a name="id5"></a>    
-**Ver nuestras claves** → `gpg --list-secret-keys --keyid-format LONG`
-**Para generar una clave, si no tienes una ya instalada** → `gpg --gen-key`
-**Agregar una clave privada a git** →  `git config --global user.signingkey clave`
-
- **-s para firmar cifrado.** → `git tag -s v0.0.3 -m "Etiqueta firmada por mi"`
+**Ver nuestras claves** → `gpg --list-secret-keys --keyid-format LONG`  
+**Para generar una clave, si no tienes una ya instalada** → `gpg --gen-key`  
+**Agregar una clave privada a git** →  `git config --global user.signingkey clave`  
+ **-s para firmar cifrado.** → `git tag -s v0.0.3 -m "Etiqueta firmada por mi"`  
 
 <br/>
 
@@ -201,10 +200,12 @@ Es una pila, por eso el pop. Se puede hacer más `stash` y el `pop` te saca el �
 
 <br/>
 
-## Errores comunes y su solución<a name="id9"></a>  
+# Errores Comunes & Soluciones<a name="id9"></a>  
 
+## Índice de Errores    
+1. [Commits atrasados](#id10)
 
-### failed to push some refs to 'name@domain'updates were rejected because the remote contains work that you do not have locally.<a name="id100"></a>  
+#### failed to push some refs to 'name@domain'updates were rejected because the remote contains work that you do not have locally.<a name="id10"></a>  
   
 **Resumen:** Alguien hizo un push al remoto mientras tú trabajabas, por lo que el remoto va un commit por delante de tú trabajo.  
   
