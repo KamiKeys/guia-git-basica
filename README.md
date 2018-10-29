@@ -135,7 +135,7 @@ donde z sería para los beta tester, número impar (versión inestable) y númer
 **Borrar etiqueta** → `git tag -d nombreEtiqueta`  
 
 De forma predeterminada etiqueta el último commit. 
-**Para etiquetar antiguos sería** →  `git tag -a v0.0.1 -m 'Primera etiqueta' 13434ecf` <--(algo del hash de ese commit)    
+**Para etiquetar antiguos sería** →  `git tag -a v0.0.1 -m 'Primera etiqueta' 13434ecf` ← (algo del hash de ese commit)    
 
 **Las etiquetas no se publican en los push. Tengo que hacer un push específico de la etiqueta o de todas.** → `git push origin v0.0.1` (en este caso es para una solo.)  
 **Sube todas las etiquetas** → `git push origin --tags`    
