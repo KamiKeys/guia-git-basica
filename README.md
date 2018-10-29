@@ -149,7 +149,7 @@ De forma predeterminada etiqueta el último commit.
 
 **Agregar una clave privada a git** →  `git config --global user.signingkey clave`
 
-`git tag -s v0.0.3 -m "Etiqueta firmada por mi"` → -s para firmar cifrado.
+ **-s para firmar cifrado.** → `git tag -s v0.0.3 -m "Etiqueta firmada por mi"`
 
 <br/>
 
