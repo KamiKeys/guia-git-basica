@@ -203,7 +203,8 @@ Es una pila, por eso el pop. Se puede hacer más `stash` y el `pop` te saca el �
 # Errores Comunes & Soluciones<a name="id9"></a>  
 
 ## Índice de Errores    
-1. [Commits atrasados](#id10)
+1. [Commits atrasados](#id10)  
+2. [Eliminar ficheros al actualizar gitignore](#id11)
 
 #### failed to push some refs to 'name@domain'updates were rejected because the remote contains work that you do not have locally.<a name="id10"></a>  
   
@@ -227,8 +228,16 @@ Cuando tu haces tu commit para ti este es el nº2 (cuando para el remoto sería 
   
   
   
-![failed to push](https://raw.githubusercontent.com/JDamianCabello/guia-git-basica/master/images/PullFailExample.png)
+![failed to push](https://raw.githubusercontent.com/JDamianCabello/guia-git-basica/master/images/PullFailExample.png)  
 
 
+#### Ignorar ficheros ya subidos al actualizar gitignore.<a name="id11"></a>  
 
+**Resumen:** Subimos ficheros a nuestro proyecto, actualizamos .gitignore y ahora queremos borrar del proyecto los nuevos ficheros a ignorar.  
 
+**Solución**  
+Para parar el tracking al fichero necesitas borrarlo del index. Puedes hacerlo con el siguiente comando:  
+`git rm --cached <fichero>`  
+Si quieres hacerlo con todas las carpetas, necesitas remover todo el fichero de forma recursiva:  
+`git rm -r --cached <carpeta>`  
+La eliminación del fichero de la cabecera de revisión tendrá lugar en el siguiente commit.
