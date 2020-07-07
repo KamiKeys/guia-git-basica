@@ -14,8 +14,9 @@
 5. [Firma Electrónica](#id5)
 6. [Ramas](#id6)
 7. [Rebase](#id7)
-8. [Stashing](#id8)
-9. [Errores Comunes & Soluciones](#id9)
+8. [Blame](#id12)
+9. [Stashing](#id8)
+10. [Errores Comunes & Soluciones](#id9)
 
 <br/>
 
@@ -68,6 +69,7 @@ En este fichero deben indicarse las rutas de los ficheros y/o carpetas que quera
 `git status -s` → Muestra información si en el add hay algo y luego en nuestro directorio de trabajo se ha añadido.  
 `git status -v` → Ver rama actual y trabajo sin add en esa rama.  
 `git diff` → Muestra lo que ya está añadido en add por lo nuevo de nuestro directorio de trabajo.  
+`git diff --cached` → Muestra los cambios de los archivos "staged".  
 
 **Arreglar un commit:**  
 `git commit --amend` → Elimina el último commit  
@@ -179,6 +181,14 @@ Un `rebase` poda la rama y la pega delante de la `master`. No se crea un `commit
 Desde la `master` se hace `git rebase nombreRamaAAñadir` 
 Eso lo copia, por lo que luego se borra la rama que ya no sirve con `git branch -d nombreRama`
 
+
+<br/>
+
+## Blame<a name="id12"></a>
+
+Blame significa "culpable", y esta herramienta nos permite filtrar en una porción de código, quién ha introducido en el programa una nueva mejora o un error.  
+`git blame nombreFichero` → Indica qué personas han hecho cambio en ese fichero en concreto.  
+`git blame -L 6,8 nombreFichero` → Indica qué personas han hecho cambio en ese fichero, pero solo en el rango de líneas indicadas.  
 
 <br/>
 
