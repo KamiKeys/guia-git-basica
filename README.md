@@ -17,6 +17,7 @@
 8. [Blame](#id12)
 9. [Stashing](#id8)
 10. [Errores Comunes & Soluciones](#id9)
+11. [License](#idLicense)
 
 <br/>
 
@@ -253,5 +254,5 @@ Si quieres hacerlo con todas las carpetas, necesitas remover todo el fichero de 
 La eliminación del fichero de la cabecera de revisión tendrá lugar en el siguiente commit.  
 **ADVERTENCIA**: Si bien esto no eliminará el archivo físico de su local, eliminará los archivos de otras máquinas de desarrolladores en el próximo git pull.  
 
-## License
+## License<a name="idLicense"></a>
 **Guía Básica de Git** is released under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License; see _LICENSE_ for further details.
