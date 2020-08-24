@@ -251,4 +251,7 @@ Para parar el tracking al fichero necesitas borrarlo del index. Puedes hacerlo c
 Si quieres hacerlo con todas las carpetas, necesitas remover todo el fichero de forma recursiva:  
 `git rm -r --cached <carpeta>`  
 La eliminación del fichero de la cabecera de revisión tendrá lugar en el siguiente commit.  
-**ADVERTENCIA**: Si bien esto no eliminará el archivo físico de su local, eliminará los archivos de otras máquinas de desarrolladores en el próximo git pull.
+**ADVERTENCIA**: Si bien esto no eliminará el archivo físico de su local, eliminará los archivos de otras máquinas de desarrolladores en el próximo git pull.  
+
+## License
+**Guía Básica de Git** is released under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License; see _LICENSE_ for further details.
